@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D84315</color>
+    <color name="colorPrimaryVariant">#BF360C</color>
+    <color name="colorSecondary">#00BCD4</color>
+    <color name="colorSecondaryVariant">#00A8BD</color>
+
+    <color name="gray_light">#dEdEdF</color>
+    <color name="button_gray">#d8d8d8</color>
+
+    <color name="ripple_color">#C5E8F7</color>
+
+
+    <color name="text_black">#FF000000</color>
+    <color name="hint_gray">#818181</color>
+
+    <color name="icon_color">#000000</color>
+
+
+    <color name="red">@color/md_red_600</color>
+    <color name="yellow">@color/md_orange_600</color>
+    <color name="green">@color/md_green_600</color>
+    <color name="colorMessageBlue">@color/md_blue_500</color>
+    <color name="page_background">@color/md_blue_grey_50</color>
+
+    <color name="white">#ffffff</color>
+    <color name="colorButtonAccentRipple">#B2EBF2</color>
+    <color name="colorButtonPrimaryRipple">#FFCCBC</color>
+    <color name="colorButtonGrayRipple">#F5F5F5</color>
+    <color name="white_trans">#aaffffff</color>
+
+    <color name="gray_dark">@color/md_grey_700</color>
+    <color name="gray">@color/md_grey_500</color>
+
+    <!--text colors-->
+    <color name="black">@color/md_black_1000</color>
+    <color name="icon">@color/md_grey_800</color>
+    <color name="text_gray">@color/md_grey_900</color>
+</resources>

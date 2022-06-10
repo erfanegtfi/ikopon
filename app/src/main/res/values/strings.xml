@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">آی کوپن</string>
+
+
+
+    <string name="nav_bar_home">صفحه اصلی</string>
+    <string name="nav_bar_profile">کاربری</string>
+    <string name="nav_bar_kopons">کوپن ها</string>
+
+
+    <string name="enjoy_best_purchase">لذت خرید بصرفه</string>
+
+    //errors
+    <string name="error_connection_error">"دستگاه خود را به اینترنت متصل کنید"</string>
+
+    //toolbar view
+
+
+  </resources>

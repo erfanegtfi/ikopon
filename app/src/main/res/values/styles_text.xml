@@ -1,0 +1,177 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="text">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">@dimen/padding_normal</item>
+        <item name="android:lineSpacingExtra">@dimen/_5dp</item>
+        <!--        <item name="drawableTint">@color/icon</item>-->
+        <item name="android:color">@color/text_black</item>
+    </style>
+
+    <style name="text.singleLine">
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingExtra">0dp</item>
+    </style>
+
+    <style name="text.twoLine">
+        <item name="android:maxLines">2</item>
+        <item name="android:minLines">2</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="text.threeLines">
+        <item name="android:maxLines">3</item>
+        <item name="android:minLines">3</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+
+    <!--////////////////////////// tabTextAppearance //////////////////////////-->
+
+    <style name="tabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="textAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+
+    <style name="textAppearance.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="textAppearance.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="textAppearance.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="textAppearance.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="textAppearance.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="textAppearance.size14.grey">
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="textAppearance.size14.white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="textAppearance.size16.white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="textAppearance.size12.grey">
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="textAppearance.size12.primary">
+        <item name="android:textColor">@color/colorPrimaryVariant</item>
+    </style>
+
+    <style name="textAppearance.size16.grey">
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="textAppearance.size18.grey">
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="textAppearance.size12.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textAppearance.size12.primary.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textAppearance.size14.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textAppearance.size16.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textAppearance.size20.bold">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <!--////////////////////////// editText //////////////////////////-->
+    <style name="hintTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="errorTextAppearance" parent="@android:style/TextAppearance">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="editText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textCursorDrawable">@color/colorPrimary</item>
+
+    </style>
+
+    <style name="textInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginTop">@dimen/spacing_medium</item>
+
+        <item name="android:textColorHint">@color/hint_gray</item>
+        <item name="hintTextAppearance">@style/hintTextAppearance</item>
+        <item name="errorTextAppearance">@style/errorTextAppearance</item>
+        <!--        <item name="tint">@color/greyEditTextHint</item>-->
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.MyApp.LargeComponent.Rounded</item>
+        <!--        <item name="materialThemeOverlay">@style/MyThemeOverlayOutlinedDense</item>-->
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeWidth">@dimen/border_width_normal</item>
+    </style>
+
+
+    <style name="ShapeAppearance.MyApp.LargeComponent.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/border_radius_medium</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+
+    <style name="editText.singleLine">
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawablePadding">10dp</item>
+    </style>
+
+    <style name="editText.multiLine">
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:minLines">1</item>
+        <item name="android:gravity">top|right</item>
+        <item name="android:maxHeight">@dimen/_100dp</item>
+        <item name="android:overScrollMode">always</item>
+        <item name="android:scrollbarStyle">insideInset</item>
+        <item name="android:scrollbars">vertical</item>
+    </style>
+
+
+
+</resources>

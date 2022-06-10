@@ -1,0 +1,94 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Ikopon" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+        <item name="android:colorBackground">@color/page_background</item>
+        <item name="textAllCaps">false</item>
+
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialogTheme</item>
+        <item name="android:dialogTheme">@style/CustomDialogTheme.radius</item>
+
+        <item name="android:fontFamily">@font/font</item>
+    </style>
+
+    <style name="SelectableItemTheme">
+        <item name="colorControlHighlight">@color/ripple_color</item>
+    </style>
+
+    <style name="SelectableItemBackground">
+        <item name="android:theme">@style/SelectableItemTheme</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <!--///////////////////////////// Bottom Sheet ///////////////////////////////-->
+
+    <style name="CustomBottomSheetDialogTheme" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+        <item name="backgroundTint">@color/page_background</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/border_radius_large</item>
+        <item name="cornerSizeTopLeft">@dimen/border_radius_large</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+
+
+    </style>
+
+    <!--///////////////////////////// Dialog ///////////////////////////////-->
+
+    <!--    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog.MinWidth">-->
+    <style name="CustomDialogTheme" parent="Theme.MaterialComponents.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryVariant</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <!--        <item name="android:background">@drawable/bg_dialog_white_round_medium</item>-->
+
+    </style>
+
+    <style name="CustomDialogTheme.radius" parent="Theme.MaterialComponents.Dialog">
+<!--        <item name="android:windowBackground">@drawable/bg_dialog_white_round_medium</item>-->
+        <item name="dialogCornerRadius">@dimen/border_radius_large</item>
+<!--        <item name="android:background">@drawable/bg_dialog_white_round_medium</item>-->
+    </style>
+
+
+    <style name="fullScreenCustomDialogTheme" parent="Theme.MaterialComponents.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryVariant</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+
+    </style>
+
+    <style name="CustomLoadingDialogTheme" parent="Theme.MaterialComponents.Dialog.MinWidth">
+        <item name="windowActionBar">false</item>
+    </style>
+
+</resources>

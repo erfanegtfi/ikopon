@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="screen_spacing">@dimen/spacing_large</dimen>
+    <dimen name="bottom_height">@dimen/_50dp</dimen>
+
+</resources>

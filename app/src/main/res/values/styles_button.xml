@@ -1,0 +1,64 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--////////////////////////// button //////////////////////////-->
+
+    <style name="button" parent="Widget.MaterialComponents.Button">
+        <item name="android:paddingLeft">@dimen/padding_large</item>
+        <item name="android:paddingRight">@dimen/padding_large</item>
+        <item name="android:layout_height">@dimen/_50dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:elevation" tools:targetApi="l">@dimen/elevation_zero</item>
+        <item name="android:stateListAnimator" tools:targetApi="l">@null</item>
+
+        <item name="cornerRadius">@dimen/border_radius_medium</item>
+
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="button.gray">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="iconTint">@color/white</item>
+        <item name="drawableTint">@color/white</item>
+        <item name="backgroundTint">@color/button_gray</item>
+        <!--        <item name="rippleColor">@color/white</item>-->
+    </style>
+
+    <style name="button.primary">
+        <item name="android:textColor">@color/white</item>
+        <item name="iconTint">@color/white</item>
+        <item name="drawableTint">@color/white</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+<!--        <item name="rippleColor">@color/white</item>-->
+    </style>
+
+
+    <style name="button.buttonOutlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_height">@dimen/bottom_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="cornerRadius">@dimen/border_radius_large</item>
+        <item name="rippleColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="button.buttonOutlined.gray" >
+        <item name="strokeColor">@color/text_gray</item>
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="rippleColor">@color/gray</item>
+    </style>
+
+    <style name="button.buttonText" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="iconTint">@color/colorPrimary</item>
+        <item name="drawableTint">@color/colorPrimary</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+</resources>
