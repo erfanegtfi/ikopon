@@ -1,6 +1,5 @@
-package io.vaiyo.presentation.utils
+package com.ikopon.ikopon.presentation.common
 
-import android.util.Patterns
 import java.util.regex.Pattern
 import java.util.regex.Pattern.compile
 

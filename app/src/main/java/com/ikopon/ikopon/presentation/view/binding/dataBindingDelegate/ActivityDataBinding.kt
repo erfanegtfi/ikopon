@@ -1,4 +1,4 @@
-package com.ikopon.ikopon.presentation.common.dataBindingDelegate
+package com.ikopon.ikopon.presentation.view.binding.dataBindingDelegate
 
 import android.app.Activity
 import androidx.annotation.LayoutRes

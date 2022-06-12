@@ -1,4 +1,4 @@
-package com.ikopon.ikopon.presentation.common.viewBindingDelegate
+package com.ikopon.ikopon.presentation.view.binding.viewBindingDelegate
 
 import android.view.LayoutInflater
 import androidx.viewbinding.ViewBinding

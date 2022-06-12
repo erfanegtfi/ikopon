@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.ikopon.ikopon.presentation.common.viewBindingDelegate.viewBinding
+import com.ikopon.ikopon.presentation.view.binding.viewBindingDelegate.viewBinding
 import com.ikopon.ikopon.databinding.ActivityCityListBinding
 import com.ikopon.ikopon.model.City
 import com.ikopon.ikopon.presentation.base.BaseActivity

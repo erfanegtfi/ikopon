@@ -3,9 +3,9 @@ package com.ikopon.ikopon.data.repository.base
 import android.util.Log
 import com.ikopon.ikopon.data.utils.ErrorApp
 import com.ikopon.ikopon.data.utils.GeneralError
-import com.ikopon.ikopon.model.base.ApiBaseResponse
 import io.vaiyo.domain.utils.exception.NetworkConnectionException
-import io.vaiyo.domain.utils.UtilsError
+import com.ikopon.ikopon.data.utils.UtilsError
+import com.ikopon.ikopon.model.base.ApiBaseResponse
 import okhttp3.ResponseBody
 import retrofit2.HttpException
 import retrofit2.Response
@@ -45,15 +45,17 @@ private fun <T> error(throwable: Throwable): ApiCallState<T> {
 
 private fun <T> error(responseBody: ResponseBody?): ApiCallState<T> {
 
-    val errorApp: ErrorApp? = UtilsError.parseError(responseBody)
+    val errorApp: ApiBaseResponse? = UtilsError.parseError(responseBody)
 
     return ApiCallState.Failure(GeneralError(errorBody = errorApp))
 }
 
 
 fun <T> onResponse(response: T): ApiCallState<T> {
-//    return if (response.status == 200)
-    return ApiCallState.Success(response)
-//    else
-//        ApiCallState.Failure(GeneralError(message = response.message))
+    return if (response is ApiBaseResponse) {
+        if (response.status == 200)
+            ApiCallState.Success(response)
+        else
+            ApiCallState.Failure(GeneralError(errorBody = response))
+    } else ApiCallState.Success(response)
 }

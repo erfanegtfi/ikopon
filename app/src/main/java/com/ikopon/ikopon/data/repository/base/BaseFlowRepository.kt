@@ -37,7 +37,7 @@ abstract class StrategyFlowRepository<T, PARAM : Param>() : BaseFlowRepository<T
 
     }.catch {
         it.printStackTrace()
-        emit(ApiCallState.Failure(GeneralError(it)))
+        emit(ApiCallState.Failure(GeneralError(throwable = it)))
     }
 
     /**
@@ -47,7 +47,7 @@ abstract class StrategyFlowRepository<T, PARAM : Param>() : BaseFlowRepository<T
      */
     private fun getLocalEmission(param: PARAM) = getLocal(param).catch {
         it.printStackTrace()
-        emit(ApiCallState.Failure(GeneralError(it)))
+        emit(ApiCallState.Failure(GeneralError(throwable = it)))
     }
 
 
