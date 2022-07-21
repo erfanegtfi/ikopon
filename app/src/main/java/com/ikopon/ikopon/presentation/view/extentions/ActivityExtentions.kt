@@ -1,8 +1,8 @@
-package com.ikopon.ikopon.presentation.common
+package com.ikopon.ikopon.presentation.view.extentions
 
 import android.content.Context
 import android.content.res.Resources
-import com.ikopon.ikopon.data.utils.GeneralError
+import com.ikopon.ikopon.core.utils.GeneralError
 import com.ikopon.ikopon.presentation.base.BaseViewActions
 
 inline fun <T1 : Any, T2 : Any, R : Any> safeNullCheck(p1: T1?, p2: T2?, block: (T1, T2) -> R?): R? {

@@ -1,7 +1,7 @@
-package com.ikopon.ikopon.presentation.common
+package com.ikopon.ikopon.presentation.view.extentions
 
 import androidx.fragment.app.Fragment
-import com.ikopon.ikopon.data.utils.GeneralError
+import com.ikopon.ikopon.core.utils.GeneralError
 
 
 fun Fragment.onMessageToast(message: String?) {

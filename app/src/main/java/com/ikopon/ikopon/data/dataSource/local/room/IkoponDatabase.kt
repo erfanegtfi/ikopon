@@ -5,10 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.ikopon.ikopon.data.dataSource.local.room.dao.CityDao
-import com.ikopon.ikopon.model.City
+import com.ikopon.ikopon.data.model.CityDataModel
 
 
-@Database(entities = [City::class], version = DatabaseMigrations.DB_VERSION)
+@Database(entities = [CityDataModel::class], version = DatabaseMigrations.DB_VERSION)
 abstract class IkoponDatabase : RoomDatabase() {
 
     abstract fun getCityDao(): CityDao

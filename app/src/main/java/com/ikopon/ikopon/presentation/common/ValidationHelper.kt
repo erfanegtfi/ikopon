@@ -2,6 +2,7 @@ package com.ikopon.ikopon.presentation.common
 
 import android.widget.EditText
 import com.google.android.material.textfield.TextInputLayout
+import com.ikopon.ikopon.presentation.view.extentions.onTextChanged
 
 fun EditText.notEmpty(message: String): Boolean {
     val str: String = text.toString()

@@ -1,4 +1,4 @@
-package com.ikopon.ikopon.model.base;
+package com.ikopon.ikopon.core.baseResponse;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ikopon.ikopon.presentation.view.binding.viewBindingDelegate.viewBinding
 import com.ikopon.ikopon.databinding.ActivityCityListBinding
-import com.ikopon.ikopon.model.City
+import com.ikopon.ikopon.domain.entities.City
 import com.ikopon.ikopon.presentation.base.BaseActivity
 import com.ikopon.ikopon.presentation.base.ViewState
 import com.ikopon.ikopon.presentation.ui.profile.city.adapter.CityAdapter

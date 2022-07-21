@@ -1,15 +1,20 @@
 package com.ikopon.ikopon.data.dataSource.remote
 
+import com.ikopon.ikopon.core.baseResponse.ApiListResponse
 import com.ikopon.ikopon.data.dataSource.remote.api.CityApi
-import com.ikopon.ikopon.model.City
-import com.ikopon.ikopon.model.base.ApiListResponse
+import com.ikopon.ikopon.data.model.CityDataModel
+import com.ikopon.ikopon.domain.entities.City
 import retrofit2.Response
 
-class CityRemoteDataSource constructor(
-    private val cityApi: CityApi
-) : RemoteDataSource<ApiListResponse<City>> {
+interface CityRemoteDataSource {
+    suspend fun getCityList(): Response<ApiListResponse<CityDataModel>>
+}
 
-    override suspend fun readFromApi(): Response<ApiListResponse<City>> {
+class CityRemoteDataSourceImpl constructor(
+    private val cityApi: CityApi
+) : CityRemoteDataSource {
+
+    override suspend fun getCityList(): Response<ApiListResponse<CityDataModel>> {
         return cityApi.getCityList()
     }
 

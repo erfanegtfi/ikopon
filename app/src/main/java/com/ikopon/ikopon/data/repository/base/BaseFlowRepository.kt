@@ -1,7 +1,8 @@
 package com.ikopon.ikopon.data.repository.base
 
-import com.ikopon.ikopon.data.utils.GeneralError
-import com.ikopon.ikopon.model.base.ApiBaseResponse
+import com.ikopon.ikopon.core.abstraction.entity.Param
+import com.ikopon.ikopon.core.utils.GeneralError
+import com.ikopon.ikopon.core.utils.ApiCallState
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
 import retrofit2.Response
@@ -31,7 +32,7 @@ abstract class StrategyFlowRepository<T, PARAM : Param>() : BaseFlowRepository<T
 
         val response = apiCall(param)
         if (response is ApiCallState.Success)
-            saveRemote(response.data)
+            saveRemote(response.result)
 
         emitAll(getLocal(param))
 
@@ -65,7 +66,7 @@ abstract class StrategyFlowRepository<T, PARAM : Param>() : BaseFlowRepository<T
             getRemote(param)
         }
         return when (response) {
-            is ApiCallState.Success -> ApiCallState.Success(response.data)
+            is ApiCallState.Success -> ApiCallState.Success(response.result)
             is ApiCallState.Failure -> ApiCallState.Failure(response.error)
         }
     }
@@ -73,17 +74,17 @@ abstract class StrategyFlowRepository<T, PARAM : Param>() : BaseFlowRepository<T
     /**
      * Gets local data from provided data source. override it to implement your entity logic.
      */
-    abstract fun getLocal(param: PARAM): Flow<ApiCallState<T>>
+    protected abstract fun getLocal(param: PARAM): Flow<ApiCallState<T>>
 
     /**
      * Gets remote data from provided data source. override it to implement your entity logic.
      */
-    abstract suspend fun getRemote(param: PARAM): Response<T>
+    protected abstract suspend fun getRemote(param: PARAM): Response<T>
 
     /**
      * Saves remote data into local data base.
      */
-    abstract suspend fun saveRemote(response: T?)
+    protected abstract suspend fun saveRemote(response: T?)
 
 }
 

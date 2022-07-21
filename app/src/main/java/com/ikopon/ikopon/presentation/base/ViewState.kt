@@ -1,6 +1,6 @@
 package com.ikopon.ikopon.presentation.base
 
-import com.ikopon.ikopon.data.utils.GeneralError
+import com.ikopon.ikopon.core.utils.GeneralError
 
 
 sealed class ViewState<out T> {

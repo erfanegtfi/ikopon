@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.ikopon.ikopon.databinding.ItemCityBinding
-import com.ikopon.ikopon.model.City
+import com.ikopon.ikopon.domain.entities.City
 
 class CityListItemViewHolder(
     private val binding: ItemCityBinding,

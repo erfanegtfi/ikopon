@@ -1,4 +1,4 @@
-package com.ikopon.ikopon.presentation.common
+package com.ikopon.ikopon.presentation.view.extentions
 
 import android.app.Activity
 import android.content.Context

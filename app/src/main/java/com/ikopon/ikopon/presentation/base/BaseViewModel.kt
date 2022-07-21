@@ -3,7 +3,7 @@ package com.ikopon.ikopon.presentation.base;
 import android.util.Log
 import androidx.databinding.ObservableField
 import androidx.lifecycle.ViewModel
-import com.ikopon.ikopon.model.base.ApiBaseResponse
+import com.ikopon.ikopon.core.baseResponse.ApiBaseResponse
 import com.ikopon.ikopon.presentation.view.loading.LoadState
 import kotlinx.coroutines.flow.MutableSharedFlow
 

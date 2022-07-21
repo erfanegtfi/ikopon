@@ -1,16 +1,11 @@
-package com.ikopon.ikopon.di
+package com.ikopon.ikopon.data.di
 
 import com.google.gson.GsonBuilder
-import com.ikopon.ikopon.data.dataSource.local.CityLocalDataSource
 import com.ikopon.ikopon.data.dataSource.local.preferences.Session
 import com.ikopon.ikopon.data.dataSource.local.preferences.SessionManager
 import com.ikopon.ikopon.data.dataSource.local.preferences.SessionManagerImp
 import com.ikopon.ikopon.data.dataSource.local.room.IkoponDatabase
-import com.ikopon.ikopon.data.dataSource.remote.CityRemoteDataSource
-import com.ikopon.ikopon.data.dataSource.remote.api.CityApi
-import com.ikopon.ikopon.data.repository.CityRepository
 import com.ikopon.ikopon.data.utils.NetInterceptor
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -21,7 +16,7 @@ import java.util.concurrent.TimeUnit
 private const val BASE_URL = "https://apid.ikopon.ir/"
 private const val REQUEST_TIMEOUT_DURATION = 30L
 
-val repositoryModule = module {
+val appStorageModule = module {
     single<SessionManager> {
         SessionManagerImp(get())
     }
@@ -39,7 +34,7 @@ val repositoryModule = module {
     }
 }
 
-val appModule = module {
+val appNetworkModule = module {
     single {
         GsonBuilder().enableComplexMapKeySerialization().setPrettyPrinting().create()
     }

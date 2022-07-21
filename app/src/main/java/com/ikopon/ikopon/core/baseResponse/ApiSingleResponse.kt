@@ -1,4 +1,4 @@
-package com.ikopon.ikopon.model.base;
+package com.ikopon.ikopon.core.baseResponse;
 
 
 import com.google.gson.annotations.SerializedName;
@@ -6,7 +6,4 @@ import com.google.gson.annotations.SerializedName;
 
 class ApiSingleResponse<T>(
     @SerializedName("data") var data: T
-) : ApiBaseResponse() {
-
-
-}
+) : ApiBaseResponse()

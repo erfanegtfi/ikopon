@@ -1,6 +1,6 @@
-package com.ikopon.ikopon.data.utils
+package com.ikopon.ikopon.core.utils
 
-import com.ikopon.ikopon.model.base.ApiBaseResponse
+import com.ikopon.ikopon.core.baseResponse.ApiBaseResponse
 import retrofit2.HttpException
 
 

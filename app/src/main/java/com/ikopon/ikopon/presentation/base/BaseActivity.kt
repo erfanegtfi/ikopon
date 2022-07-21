@@ -7,7 +7,7 @@ import android.view.MenuItem;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.lifecycleScope
-import com.ikopon.ikopon.presentation.common.onMessageToast
+import com.ikopon.ikopon.presentation.view.extentions.onMessageToast
 import kotlinx.coroutines.flow.collectLatest
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe

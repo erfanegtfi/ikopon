@@ -4,12 +4,11 @@ import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.ikopon.ikopon.data.repository.CityRepository
-import com.ikopon.ikopon.data.repository.base.AnyParam
-import com.ikopon.ikopon.data.repository.base.ApiCallState
+import com.ikopon.ikopon.core.abstraction.entity.AnyParam
+import com.ikopon.ikopon.core.utils.ApiCallState
 import com.ikopon.ikopon.data.repository.base.RepositoryStrategy
-import com.ikopon.ikopon.model.City
-import com.ikopon.ikopon.model.base.ApiListResponse
+import com.ikopon.ikopon.domain.entities.City
+import com.ikopon.ikopon.domain.repositories.CityRepository
 import com.ikopon.ikopon.presentation.base.BaseViewModel
 import com.ikopon.ikopon.presentation.base.ViewState
 import kotlinx.coroutines.Dispatchers
@@ -35,14 +34,14 @@ class CityViewModel constructor(
 
 
     fun getCityList() {
-        cityRepository.getResult(AnyParam(), RepositoryStrategy.OfflineFirst)
+        cityRepository.getCityList(RepositoryStrategy.OfflineFirst)
             .flowOn(Dispatchers.IO)
             .onStart {
                 _cityListLiveData.value = ViewState.Loading
             }
             .onEach {
                 when (it) {
-                    is ApiCallState.Success -> _cityListLiveData.value = ViewState.Success(data = it.data.data)
+                    is ApiCallState.Success -> _cityListLiveData.value = ViewState.Success(data = it.result)
                     is ApiCallState.Failure -> _cityListLiveData.value = ViewState.Failure(error = it.error)
                 }
             }

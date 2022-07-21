@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.View
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
-import com.ikopon.ikopon.data.utils.GeneralError
+import com.ikopon.ikopon.core.utils.GeneralError
 
 object BaseViewActions {
 

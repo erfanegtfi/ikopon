@@ -1,4 +1,4 @@
-package com.ikopon.ikopon.model;
+package com.ikopon.ikopon.data.model;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
@@ -7,15 +7,16 @@ import androidx.room.TypeConverters;
 
 import com.google.gson.annotations.SerializedName;
 import com.ikopon.ikopon.data.dataSource.local.room.dataTypeConverter.CityLocationConverter;
+import com.ikopon.ikopon.domain.entities.KeyValueInterface;
 
 import java.util.ArrayList;
 
 import kotlinx.parcelize.Parcelize;
 
-@Entity(tableName = City.TABLE_NAME)
+@Entity(tableName = CityDataModel.TABLE_NAME)
 @TypeConverters({CityLocationConverter.class})
 @Parcelize
-public class City implements KeyValueInterface {
+public class CityDataModel {
     public final static String TABLE_NAME = "city_list";
 
     @SerializedName("name")
@@ -47,28 +48,18 @@ public class City implements KeyValueInterface {
                         "}";
     }
 
-    public City() {
+    public CityDataModel(String name, @NonNull String citySlug, String tell, String weblink, String address, ArrayList<Double> location) {
+        this.name = name;
+        this.citySlug = citySlug;
+        this.tell = tell;
+        this.weblink = weblink;
+        this.address = address;
+        this.location = location;
     }
 
-    @Override
-    public String getKey() {
-        return citySlug;
+    public CityDataModel() {
     }
 
-    @Override
-    public String getValue() {
-        return name;
-    }
-
-    @Override
-    public void setKey(String key) {
-
-    }
-
-    @Override
-    public void setValue(String value) {
-
-    }
 
     public String getName() {
         return name;

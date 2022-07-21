@@ -8,7 +8,7 @@
 
         <variable
             name="keyValue"
-            type="com.ikopon.ikopon.model.KeyValueInterface" />
+            type="com.ikopon.ikopon.domain.entities.KeyValueInterface" />
     </data>
 
     <LinearLayout

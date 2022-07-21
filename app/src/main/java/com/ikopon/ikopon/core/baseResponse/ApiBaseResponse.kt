@@ -1,4 +1,4 @@
-package com.ikopon.ikopon.model.base;
+package com.ikopon.ikopon.core.baseResponse;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -8,9 +8,8 @@ open class ApiBaseResponse(
     @SerializedName("http_code") var http_code: Int? = null,
     @SerializedName("success") var success: Boolean? = null,
     @SerializedName("total") var total: Int? = null,
-    @SerializedName("status") var status: Int? = null,
+//    @SerializedName("status") var status: Int? = null,
 ){
 
-    var messageShowType: MessageShowType? = null
 
 }

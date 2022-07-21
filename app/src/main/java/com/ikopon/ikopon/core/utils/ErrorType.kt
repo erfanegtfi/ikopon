@@ -1,4 +1,4 @@
-package com.ikopon.ikopon.data.utils
+package com.ikopon.ikopon.core.utils
 
 enum class ErrorType {
     NETWORK,

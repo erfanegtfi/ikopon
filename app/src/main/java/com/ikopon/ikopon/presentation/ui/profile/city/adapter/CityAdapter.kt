@@ -7,7 +7,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.ikopon.ikopon.R
 import com.ikopon.ikopon.databinding.ItemCityBinding
-import com.ikopon.ikopon.model.City
+import com.ikopon.ikopon.domain.entities.City
 
 class CityAdapter (private val properties: List<City>, val context: Context, private val adapterCallBack: (position: Int, view: Int?) -> Unit) :
     RecyclerView.Adapter<CityListItemViewHolder>() {

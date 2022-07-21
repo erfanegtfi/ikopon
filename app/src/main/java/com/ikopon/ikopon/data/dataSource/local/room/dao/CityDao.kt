@@ -1,7 +1,7 @@
 package com.ikopon.ikopon.data.dataSource.local.room.dao
 
 import androidx.room.*
-import com.ikopon.ikopon.model.City
+import com.ikopon.ikopon.data.model.CityDataModel
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -13,21 +13,21 @@ interface CityDao {
      * @param posts Posts
      */
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insertCities(posts: List<City>)
+    fun insertCities(posts: List<CityDataModel>)
 
 
     @Update(onConflict = OnConflictStrategy.REPLACE)
-    fun updateCities(track: List<City>)
+    fun updateCities(track: List<CityDataModel>)
 
 
     /**
      * Fetches all the posts from the [Post.TABLE_NAME] table.
      * @return [Flow]
      */
-    @Query("SELECT * FROM ${City.TABLE_NAME}")
-    fun getAllCities(): Flow<List<City>>
+    @Query("SELECT * FROM ${CityDataModel.TABLE_NAME}")
+    fun getAllCities(): Flow<List<CityDataModel>>
 
-    @Query("DELETE FROM ${City.TABLE_NAME}")
+    @Query("DELETE FROM ${CityDataModel.TABLE_NAME}")
     fun deleteAllCities()
 
 }

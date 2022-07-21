@@ -1,4 +1,4 @@
-package io.vaiyo.domain.utils.exception
+package com.ikopon.ikopon.core.utils.exception
 
 import java.io.IOException
 

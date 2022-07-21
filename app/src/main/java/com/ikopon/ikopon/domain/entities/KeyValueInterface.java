@@ -1,4 +1,4 @@
-package com.ikopon.ikopon.model;
+package com.ikopon.ikopon.domain.entities;
 
 /**
  * Created by Erfan Eghterafi on 7/31/2018.
